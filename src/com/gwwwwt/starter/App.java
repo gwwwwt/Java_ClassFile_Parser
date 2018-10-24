@@ -10,8 +10,10 @@ import java.io.IOException;
 
 public class App {
     public static void main(String[] args) throws IOException {
-        DataGenerator generator = new ClassFileReader("/Users/wgao/Documents/Java_ClassFile_Parser/out/production/" +
-                "Java_ClassFile_Parser/com/gwwwwt/test/Iphone6s.class");
+
+        DataGenerator generator = new ClassFileReader(System.getenv("HOME")
+                                                      + "/Documents/Java_ClassFile_Parser/out/production/"
+                                                      + "Java_ClassFile_Parser/com/gwwwwt/test/Iphone6s.class");
 
         Magic magic = new Magic();
         magic.readFromDataGenerator(generator);
