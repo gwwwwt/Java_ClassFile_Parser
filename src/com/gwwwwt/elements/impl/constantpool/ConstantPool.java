@@ -19,7 +19,8 @@ public class ConstantPool extends DefaultElementImpl {
 
     @Override
     public String print() {
-        StringBuilder builder = new StringBuilder("Constant Pool\n");
+        StringBuilder builder = new StringBuilder();
+        builder.append("Size : " + constant_pool_count + "\n");
 
         for(ConstantPoolElement e : elements) {
             if(null == e) {
