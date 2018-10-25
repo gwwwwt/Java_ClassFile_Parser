@@ -1,0 +1,24 @@
+
+apply plugin: 'java'
+
+sourceSets {
+    main{
+        java {
+            srcDir 'src/java'
+        }
+
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
+buildDir = 'out'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies{
+   compile  'net.sf.ehcache:ehcache:2.10.4'
+}
