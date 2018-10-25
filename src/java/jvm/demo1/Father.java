@@ -1,4 +1,4 @@
-package jvm;
+package jvm.demo1;
 
 import net.sf.ehcache.pool.sizeof.AgentSizeOf;
 import net.sf.ehcache.pool.sizeof.SizeOf;
