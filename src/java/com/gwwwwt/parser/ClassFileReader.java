@@ -37,7 +37,6 @@ public class ClassFileReader implements DataGenerator {
 
 
     public static void main(String[] args) throws IOException {
-        new ClassFileReader("/Users/wgao/Documents/Java_ClassFile_Parser/out/production/" +
-                "Java_ClassFile_Parser/com/gwwwwt/elements/impl/Version.class");
+
     }
 }

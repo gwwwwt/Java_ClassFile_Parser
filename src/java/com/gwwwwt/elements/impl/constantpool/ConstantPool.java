@@ -2,7 +2,7 @@ package com.gwwwwt.elements.impl.constantpool;
 
 import com.gwwwwt.Contants.ConstantPoolTag;
 import com.gwwwwt.elements.impl.constantpool.elements.ConstantPoolElement;
-import com.gwwwwt.elements.util.DefaultElementImpl;
+import com.gwwwwt.elements.DefaultElementImpl;
 import com.gwwwwt.parser.DataGenerator;
 
 import java.util.ArrayList;
@@ -36,12 +36,17 @@ public class ConstantPool extends DefaultElementImpl {
     protected void processDynamic(DataGenerator generator) {
         this.constant_pool_count = this.content.length;
         elements = new ArrayList<>(constant_pool_count);
-        elements.add(0, null);
 
         /*
         constant_pool_count的值等于常量池表中的成员数加1。 索引值只有在大于0且小于constant_pool_count时是有效的
          */
+        elements.add(0, null);
 
+        /*
+        像CONSTANT_CLASS_TAG等，其中会包含一些指向常量池中其他UTF8元素的索引，
+        初始读取时也只是一个索引值，为了后面显示更直观一些，设置了下面两个list，
+        用于在循环读取常量池元素后，根据里面的索引值指向正确的实例，
+         */
         List<ConstantPoolElement> needLink = new ArrayList<>();
         List<ConstantPoolElement> needTwoLinks = new ArrayList<>();
 

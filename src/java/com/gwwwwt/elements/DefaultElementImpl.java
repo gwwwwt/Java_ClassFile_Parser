@@ -1,6 +1,7 @@
-package com.gwwwwt.elements.util;
+package com.gwwwwt.elements;
 
 import com.gwwwwt.elements.BaseElement;
+import com.gwwwwt.elements.util.ByteUtil;
 import com.gwwwwt.parser.DataGenerator;
 
 public class DefaultElementImpl implements BaseElement {

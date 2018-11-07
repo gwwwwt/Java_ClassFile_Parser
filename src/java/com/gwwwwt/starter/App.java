@@ -13,7 +13,7 @@ public class App {
 
         DataGenerator generator = new ClassFileReader(System.getenv("HOME")
                                                       + "/Documents/Java_ClassFile_Parser/out/production/"
-                                                      + "Java_ClassFile_Parser/com/gwwwwt/test/Iphone6s.class");
+                                                      + "classes/com/gwwwwt/test/Iphone6s.class");
 
         Magic magic = new Magic();
         magic.readFromDataGenerator(generator);

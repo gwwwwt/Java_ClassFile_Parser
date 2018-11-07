@@ -1,7 +1,7 @@
 package com.gwwwwt.elements.impl;
 
 import com.gwwwwt.elements.util.ByteUtil;
-import com.gwwwwt.elements.util.DefaultElementImpl;
+import com.gwwwwt.elements.DefaultElementImpl;
 
 /**
  * u2: minor_version

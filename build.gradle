@@ -26,8 +26,3 @@ repositories {
 dependencies{
    compile 'net.sf.ehcache:ehcache:2.10.4'
 }
-
-task downloadJarToLib(type: Copy) {
-    from configurations.runtime
-    into 'lib'
-}
